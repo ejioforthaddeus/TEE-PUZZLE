@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="guessMe.css" rel="stylesheet" type="text/css"></link>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <section class="logo">
+                <h1><b>GUESS</b></h1>
+                <h1> me </h1>
+            </section>
+
+            <section class="gameInfo">
+                <h3>LEVEL</h3>
+                <p id="levelCount"> 1 </p>
+                <h3>GUESSED</h3>
+                <p id="guessedCount"> 0 </p>
+                <h3>HELP</h3>
+                <p id="helpCount"> 1 </p>                
+            </section>
+        </header>
+        
+        <p id="gameWord"> START </p>
+
+        <div class="control">
+                <section class="gameWord_input">
+                    <input type="text" id="input"> 
+                    <button class="check" id="check">CHECK</button>
+                </section>
+                <section class="buttons">
+                    <button class="shuffle" id="shuffle"><i class="fa fa-random"></i></button>
+                    <button href="#" class="help" id="help"><i class="fa fa-heart"></i></button>
+                </section>
+        </div>
+        <div class="hidden" id="msg-container">
+            <p id="message"> CORRECT </p>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p>NARU.DESIGNS &copy 2019</p>
+    </footer>
+
+<script src="guessMe.js" type="text/javascript"></script>
+</body>
+</html>
