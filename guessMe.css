@@ -51,6 +51,10 @@ body {
     align-items: flex-end;
     color: white;
     transition: ease-in;
+    -webkit-transition: ease-in;
+    -moz-transition: ease-in;
+    -ms-transition: ease-in;
+    -o-transition: ease-in;
 }
 
 .gameInfo h3 {
@@ -76,7 +80,8 @@ body {
 }
 
 .fadeIn  {
-    animation: 1s new-level;    
+    animation: 1s new-level;
+    -webkit-animation: 1s new-level;
 }
 
 @keyframes new-level {
