@@ -57,8 +57,8 @@ hr {
     font-weight: lighter;
 }
 
-.lets-play {
-    padding: 10px;
+.play {
+    padding: 10px 20px;
     background-color: #f36d82;
     color: white;    
     border: none;
@@ -247,6 +247,7 @@ hr {
 
 .true {
     margin: 0 auto;
+    margin-bottom: 25px;
     text-align: center;
     background-color: rgb(204, 248, 204);
     padding: 20px;
@@ -257,6 +258,7 @@ hr {
 
 .false {
     margin: 0 auto;
+    margin-bottom: 25px;
     text-align: center;
     background-color: rgb(238, 153, 157);
     padding: 20px;

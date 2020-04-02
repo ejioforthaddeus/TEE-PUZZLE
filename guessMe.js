@@ -12,10 +12,10 @@ let message = document.getElementById('message');
 let msgContainer = document.getElementById('msg-container');
 const dim = document.getElementById('dim');
 const about = document.getElementById('about');
-const letsPlay = document.getElementById('lets-play');
+const play = document.getElementById('play');
 
 //Display welcome message / guide
-letsPlay.addEventListener('click', () => {
+play.addEventListener('click', () => {
     about.style.display = 'none';
     dim.style.display = 'none';
 })
