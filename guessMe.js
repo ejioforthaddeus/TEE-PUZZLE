@@ -10,6 +10,15 @@ let helpButton = document.getElementById('help');
 let userInput = document.getElementById('input');
 let message = document.getElementById('message');
 let msgContainer = document.getElementById('msg-container');
+const dim = document.getElementById('dim');
+const about = document.getElementById('about');
+const letsPlay = document.getElementById('lets-play');
+
+//Display welcome message / guide
+letsPlay.addEventListener('click', () => {
+    about.style.display = 'none';
+    dim.style.display = 'none';
+})
 
 //GAME WORD DATABASE
 let gameBase = [
