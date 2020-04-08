@@ -125,7 +125,6 @@ userInput.addEventListener('input', () => {
 
 //MAIN FUNCTION TAHT VALIDATES RIGHT | WRONG INPUTS
 function validate(){
-
     //console.log(gameBase[leveller][rndm]);
     //Prevent use of check button while msg-container is visible to prevent alteration of guessedCount
     //As long as the error or success message remains hidden, check can be used  
@@ -148,6 +147,8 @@ function validate(){
             msgContainer.classList.toggle('true'); 
 
             msgContainer.classList.toggle('hidden'); 
+
+            userInput.focus(); //keep the input focus so that user don't have to click on it after every correct guess
 
             setTimeout(()=> {
 
