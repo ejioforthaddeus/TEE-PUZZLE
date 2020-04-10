@@ -3,8 +3,65 @@
     margin: 0;
 }
 
+:root {
+    --color: rgb(250, 118, 138);
+}
+
 body {
     background-color: white;
+}
+
+.restart {
+    width: 250px;
+    height: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: 10;
+    color: #707070;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.6;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    display: none;
+}
+
+.restart button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: white;
+    font-family: Verdana, sans-serif;
+    font-size: 13px;
+    border: none;
+    background-color: var(--color);
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.restart :nth-child(3) {
+    margin-left: 30px;
+    background: none;
+    color: #707070;
+    font-weight: bold;
 }
 
 .dim {
@@ -59,7 +116,7 @@ hr {
 
 .play {
     padding: 10px 20px;
-    background-color: #f36d82;
+    background-color: var(--color);
     color: white;    
     border: none;
     border-radius: 6px;
@@ -81,9 +138,14 @@ hr {
 }
 
 .header {
-    background-color: #FF7A8F;
+    background-color: var(--color);
     width: block;
     padding: 5px 10px;
+    transition: ease 1s;
+    -webkit-transition: ease 1s;
+    -moz-transition: ease 1s;
+    -ms-transition: ease 1s;
+    -o-transition: ease 1s;
 }
 
 .logo {
@@ -103,6 +165,9 @@ hr {
     position: relative;
     top: 75px;
     margin-left: 2%; 
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .logo :nth-child(2){
@@ -135,7 +200,7 @@ hr {
 .gameInfo p {
     padding: 1.5px 7px;
     margin-right: 10px;
-    color: #FF7A8F;
+    color: var(--color);
     background-color: rgb(255, 255, 255);
     text-align: center;
     width: auto;
@@ -195,7 +260,7 @@ hr {
 
 .gameWord_input .check{
     color: white;
-    background-color: #FF7A8F;
+    background-color: var(--color);
     border: none;
     width: 130px;
     padding: 15px;
@@ -214,7 +279,7 @@ hr {
 }
 
 .buttons .shuffle {
-    background-color: #FF7A8F;
+    background-color: var(--color);
     width: 50px;
     height: 50px;
     border: none;
@@ -227,7 +292,7 @@ hr {
 }
 
 .buttons .help {
-    background-color: #FF7A8F;
+    background: var(--color);
     width: 50px;
     height: 50px;
     border: none;
@@ -242,7 +307,7 @@ hr {
 }
 
 .help:active, .shuffle:active, .check:active {
-    background-color: #f36d82;
+    background: var(--color);
 }
 
 .true {

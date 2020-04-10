@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
-    
+    <section id="restart" class="restart">
+        <p>Would you like to restart the game?</p>
+        <button id="no-restart">NO</button>
+        <button id="yes-restart">YES</button>
+    </section>
+    <!-- Dim Background -->
     <div id="dim" class="dim">
         <div id="about" class="about">
             <h4>WELCOME TO GUESSME</h4><hr /><br>
@@ -18,16 +23,18 @@
                 input it and use the <b>check</b> button or hit <b>enter</b> 
                 to check if your guess is correct. You can also use the <b>space key</b> 
                 to shuffle the given letters.<br>
+                <em>Click on <b>GUESS ME</b> in the big circle to start all over</em>
                 <p><b> Example: </b></p>       
-                <p><b> Shuffled Word: </b> M A G E</p>       
-                <p><b> Correct Word: </b> G A M E</p>    
+                <p><b> Shuffled Word: </b> M R E G A</p>       
+                <p><b> Correct Word: </b> G A M E R</p>    
             </p>
             <button id="play" class="play">PLAY</button>
         </div>
     </div>
+    <!-- Main Game Container -->
     <div class="container">
-        <header class="header">
-            <section class="logo">
+        <header id="header" class="header">
+            <section id="logo" class="logo">
                 <h1><b>GUESS</b></h1>
                 <h1> me </h1>
             </section>
@@ -42,7 +49,7 @@
             </section>
         </header>
         
-        <p id="gameWord"> START </p>
+        <p id="gameWord"> ... </p>
 
         <div class="control">
                 <section class="gameWord_input">
