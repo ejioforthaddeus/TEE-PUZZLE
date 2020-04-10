@@ -92,6 +92,12 @@ let gameBase = [
     ]
 ];
 
+const colors = [
+    'rgba(250, 118, 138)', 'rgba(151, 180, 147)', 'rgba(199, 148, 118)', 'rgba(197, 127, 170)', 'rgba(185, 6, 117)', 
+    'rgba(18, 92, 34)', 'rgba(91, 120, 124)', 'rgba(139, 139, 139)', 'rgba(189, 92, 92)', 'rgba(194, 181, 144)',
+    'rgba(7, 188, 194)', 'rgba(190, 96, 124)', 'rgba(113, 86, 116)', 'rgba(233, 106, 106)'
+]
+
 // //restore saved state since last application quit
 if(localStorage.getItem('gameState')) {
     about.style.display = 'none';
@@ -103,6 +109,7 @@ if(localStorage.getItem('gameState')) {
     leveller = gameState.leveller;
     //gameWord.innerText = gameState.gameWord;
     gameBase = gameState.gameBase;
+    document.documentElement.style.setProperty('--color', colors[leveller]);
 }
 
 //SHUFFLER FUNCTION
@@ -278,9 +285,3 @@ function saveGameState() {
     }
     localStorage.setItem('gameState', JSON.stringify(state));
 }
-
-const colors = [
-    'rgba(250, 118, 138)', 'rgba(151, 180, 147)', 'rgba(199, 148, 118)', 'rgba(197, 127, 170)', 'rgba(185, 6, 117)', 
-    'rgba(18, 92, 34)', 'rgba(91, 120, 124)', 'rgba(139, 139, 139)', 'rgba(189, 92, 92)', 'rgba(194, 181, 144)',
-    'rgba(7, 188, 194)', 'rgba(190, 96, 124)', 'rgba(113, 86, 116)', 'rgba(233, 106, 106)'
-]
