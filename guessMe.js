@@ -157,6 +157,11 @@ function validate(){
     //Prevent use of check button while msg-container is visible to prevent alteration of guessedCount
     //As long as the error or success message remains hidden, check can be used  
     if (msgContainer.classList.contains('hidden')){
+        if(userInput.value === 'YEMI.JS'){
+            helpCount.innerText++;
+            userInput.value = "";
+            saveGameState();
+        }
         //CONDITIONS WHEN USER INPUTS THE CORRECT VALUE
         if (userInput.value == gameBase[leveller][rndm]){
             guessedCount.innerText++; 
@@ -168,17 +173,15 @@ function validate(){
             message.innerText = 'CORRECT';
             msgContainer.classList.toggle('true'); 
             msgContainer.classList.toggle('hidden'); 
-            userInput.focus(); //keep the input focus so that user don't have to click on it after every correct guess
-
+            userInput.focus(); //keep the input in focus so that user don't have to click on it after every correct guess
             setTimeout(()=> {
                 msgContainer.classList.toggle('true'); 
                 msgContainer.classList.toggle('hidden'); 
             }, 2000);
-
             setTimeout(() => {
-                //BONUS HELP AFTER 5 CORRECT GUESSES
+                //BONUS HELP ON NEW LEVEL (AFTER 10 CORRECT GUESSES)
                 if (guessedCount.innerText % 10 == 0){
-                    helpCount.innerText++;
+                    helpCount.innerText = Number(helpCount.innerText) + 3;
                     if (helpCount.innerText > 0){
                         helpButton.style.cursor = 'pointer';
                         helpButton.style.background = '--color';
