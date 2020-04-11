@@ -156,12 +156,6 @@ function validate(){
     //console.log(gameBase[leveller][rndm]);
     //Prevent use of check button while msg-container is visible to prevent alteration of guessedCount
     //As long as the error or success message remains hidden, check can be used  
-    if (msgContainer.classList.contains('hidden')){
-        if(userInput.value === 'YEMI.JS'){
-            helpCount.innerText++;
-            userInput.value = "";
-            saveGameState();
-        }
         //CONDITIONS WHEN USER INPUTS THE CORRECT VALUE
         if (userInput.value == gameBase[leveller][rndm]){
             guessedCount.innerText++; 
