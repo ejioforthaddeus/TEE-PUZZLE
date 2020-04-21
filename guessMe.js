@@ -156,69 +156,68 @@ function validate(){
     //console.log(gameBase[leveller][rndm]);
     //Prevent use of check button while msg-container is visible to prevent alteration of guessedCount
     //As long as the error or success message remains hidden, check can be used  
-        //CONDITIONS WHEN USER INPUTS THE CORRECT VALUE
-        if (userInput.value == gameBase[leveller][rndm]){
-            guessedCount.innerText++; 
-            //REMOVE EACH WORD FROM THE ARRAY AFTER EVERY CORRECT GUESS TO AVOID THEM REOCCURRING IN THE SAME GAME PLAY OR LEVEL
-            gameBase[leveller].splice(rndm,1);
-            //Effect for every new guess
-            fadeIn(guessedCount);
-            //OUTPUT SUCCESS OR FAILURE MESSAGE BASED ON USER INPUT
-            message.innerText = 'CORRECT';
+    //CONDITIONS WHEN USER INPUTS THE CORRECT VALUE
+    if (userInput.value == gameBase[leveller][rndm]){
+        guessedCount.innerText++; 
+        //REMOVE EACH WORD FROM THE ARRAY AFTER EVERY CORRECT GUESS TO AVOID THEM REOCCURRING IN THE SAME GAME PLAY OR LEVEL
+        gameBase[leveller].splice(rndm,1);
+        //Effect for every new guess
+        fadeIn(guessedCount);
+        //OUTPUT SUCCESS OR FAILURE MESSAGE BASED ON USER INPUT
+        message.innerText = 'CORRECT';
+        msgContainer.classList.toggle('true'); 
+        msgContainer.classList.toggle('hidden'); 
+        userInput.focus(); //keep the input in focus so that user don't have to click on it after every correct guess
+        setTimeout(()=> {
             msgContainer.classList.toggle('true'); 
             msgContainer.classList.toggle('hidden'); 
-            userInput.focus(); //keep the input in focus so that user don't have to click on it after every correct guess
-            setTimeout(()=> {
-                msgContainer.classList.toggle('true'); 
-                msgContainer.classList.toggle('hidden'); 
-            }, 2000);
-            setTimeout(() => {
-                //BONUS HELP ON NEW LEVEL (AFTER 10 CORRECT GUESSES)
-                if (guessedCount.innerText % 10 == 0){
-                    helpCount.innerText = Number(helpCount.innerText) + 3;
-                    if (helpCount.innerText > 0){
-                        helpButton.style.cursor = 'pointer';
-                        helpButton.style.background = '--color';
-                    }
-                    //effect for every help count increment
-                    fadeIn(helpCount);
+        }, 2000);
+        setTimeout(() => {
+            //BONUS HELP ON NEW LEVEL (AFTER 10 CORRECT GUESSES)
+            if (guessedCount.innerText % 10 == 0){
+                helpCount.innerText = Number(helpCount.innerText) + 3;
+                if (helpCount.innerText > 0){
+                    helpButton.style.cursor = 'pointer';
+                    helpButton.style.background = '--color';
                 }
+                //effect for every help count increment
+                fadeIn(helpCount);
+            }
 
-                //LEVEL UP AFTER A WHOLE LEVEL WORDS ARE CORRECTLY GUESSED
-                if (guessedCount.innerText % 10 == 0){
-                    levelCount.innerText++;
-                    leveller = levelCount.innerText - 1;
-                    //Effect for every new level
-                    fadeIn(levelCount);
-                    //save game state on every new level
-                    saveGameState();
-                    //change game color on every new level
-                    document.documentElement.style.setProperty('--color', colors[leveller]);
-                }
+            //LEVEL UP AFTER A WHOLE LEVEL WORDS ARE CORRECTLY GUESSED
+            if (guessedCount.innerText % 10 == 0){
+                levelCount.innerText++;
+                leveller = levelCount.innerText - 1;
+                //Effect for every new level
+                fadeIn(levelCount);
+                //save game state on every new level
+                saveGameState();
+                //change game color on every new level
+                document.documentElement.style.setProperty('--color', colors[leveller]);
+            }
 
-                //RANDOMIZE AND REASSIGN RANDOM WORD TO THE GAME WORD VALUE
-                //RESET USER INPUT
-                rndm =  Math.floor(Math.random() * gameBase[leveller].length);
-                gameWord.innerText = shuffle(gameBase[leveller][rndm]);  
-                userInput.value = '';
-            }, 2000);
-            //save game state after every currect word
-            saveGameState();
-            //alert(gameBase[leveller][rndm]); 
-        }
-        //CONDITIONS WHEN USER INPUTS THE WRONG VALUE
-        else {
-            message.innerText = 'WRONG';
+            //RANDOMIZE AND REASSIGN RANDOM WORD TO THE GAME WORD VALUE
+            //RESET USER INPUT
+            rndm =  Math.floor(Math.random() * gameBase[leveller].length);
+            gameWord.innerText = shuffle(gameBase[leveller][rndm]);  
+            userInput.value = '';
+        }, 2000);
+        //save game state after every currect word
+        saveGameState();
+        //alert(gameBase[leveller][rndm]); 
+    }
+    //CONDITIONS WHEN USER INPUTS THE WRONG VALUE
+    else {
+        message.innerText = 'WRONG';
+        msgContainer.classList.toggle('false'); 
+        msgContainer.classList.toggle('hidden'); 
+        setTimeout(()=> {
             msgContainer.classList.toggle('false'); 
             msgContainer.classList.toggle('hidden'); 
-            setTimeout(()=> {
-                msgContainer.classList.toggle('false'); 
-                msgContainer.classList.toggle('hidden'); 
-            }, 2000);
-        }
-        //console.log(gameBase[leveller]);
+        }, 2000);
     }
-};
+    //console.log(gameBase[leveller]);
+}
 
 //when "enter" is clicked
 document.addEventListener("keydown", function(e){
