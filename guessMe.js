@@ -61,7 +61,7 @@ let gameBase = [
         'COMPANY', 'OUTREACH', 'STYLIST', 'MANAGER', 'BULKY', 'SECURITY', 'DRONES', 'AILMENT', 'ANGUISH', 'FREEDOM'
     ],
     stage6 = [
-        'LEVERAGE', 'DIVIDEND', 'SEQUENCE', 'SPIRAL', 'BURGER', 'VULGAR', 'BRILLIANT', 'ZONAL', 'CAREFULL', 'HANDSOME'
+        'LEVERAGE', 'DIVIDEND', 'SEQUENCE', 'SPIRAL', 'BURGER', 'VULGAR', 'BRILLIANT', 'ZONAL', 'CAREFUL', 'HANDSOME'
     ],
     stage7 = [
         'BEAUTIFUL', 'GLIMPSE', 'DINNER', 'AMERICA', 'CLASSIC', 'ANNOYED', 'BLOGGER', 'GREETINGS', 'SUSPECTS', 'ASTONISHED'
@@ -93,8 +93,8 @@ let gameBase = [
 ];
 
 const colors = [
-    'rgba(250, 118, 138)', 'rgba(151, 180, 147)', 'rgba(199, 148, 118)', 'rgba(197, 127, 170)', 'rgba(185, 6, 117)', 
-    'rgba(18, 92, 34)', 'rgba(91, 120, 124)', 'rgba(139, 139, 139)', 'rgba(189, 92, 92)', 'rgba(194, 181, 144)',
+    'rgba(250, 118, 138)', 'rgba(151, 180, 147)', 'rgba(199, 148, 118)', 'rgba(197, 127, 170)', 'rgba(125, 133, 118)', 
+    'rgba(235, 198, 143)', 'rgba(91, 120, 124, .7)', 'rgba(139, 139, 139)', 'rgba(189, 92, 92, .7)', 'rgba(194, 181, 144)',
     'rgba(7, 188, 194)', 'rgba(190, 96, 124)', 'rgba(113, 86, 116)', 'rgba(233, 106, 106)'
 ]
 
