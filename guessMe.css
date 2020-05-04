@@ -51,7 +51,7 @@ body {
     font-family: Verdana, sans-serif;
     font-size: 13px;
     border: none;
-    background-color: var(--color);
+    background-color: var(--color, rgb(250, 118, 138));
     cursor: pointer;
     outline: none;
     -webkit-tap-highlight-color: transparent;
@@ -116,7 +116,7 @@ hr {
 
 .play {
     padding: 10px 20px;
-    background-color: var(--color);
+    background-color: var(--color, rgb(250, 118, 138));
     color: white;    
     border: none;
     border-radius: 6px;
@@ -138,7 +138,7 @@ hr {
 }
 
 .header {
-    background-color: var(--color);
+    background-color: var(--color, rgb(250, 118, 138));
     width: block;
     padding: 5px 10px;
     transition: ease 1s;
@@ -200,7 +200,7 @@ hr {
 .gameInfo p {
     padding: 1.5px 7px;
     margin-right: 10px;
-    color: var(--color);
+    color: var(--color, rgb(250, 118, 138));
     background-color: rgb(255, 255, 255);
     text-align: center;
     width: auto;
@@ -260,7 +260,7 @@ hr {
 
 .gameWord_input .check{
     color: white;
-    background-color: var(--color);
+    background-color: var(--color, rgb(250, 118, 138));
     border: none;
     width: 130px;
     padding: 15px;
@@ -279,7 +279,7 @@ hr {
 }
 
 .buttons .shuffle {
-    background-color: var(--color);
+    background-color: var(--color, rgb(250, 118, 138));
     width: 50px;
     height: 50px;
     border: none;
@@ -292,7 +292,7 @@ hr {
 }
 
 .buttons .help {
-    background: var(--color);
+    background: var(--color, rgb(250, 118, 138));
     width: 50px;
     height: 50px;
     border: none;
@@ -307,7 +307,7 @@ hr {
 }
 
 .help:active, .shuffle:active, .check:active {
-    background: var(--color);
+    background: var(--color, rgb(250, 118, 138));
 }
 
 .true {
