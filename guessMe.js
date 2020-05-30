@@ -170,7 +170,7 @@ function validate(){
         setTimeout(()=> {
             msgContainer.classList.toggle('true'); 
             msgContainer.classList.toggle('hidden'); 
-            userInput.focus(); //keep the input in focus so that user don't have to click on it after every correct guess
+            //userInput.focus(); //keep the input in focus so that user don't have to click on it after every correct guess
         }, 2000);
         setTimeout(() => {
             //BONUS HELP ON NEW LEVEL (AFTER 10 CORRECT GUESSES)
