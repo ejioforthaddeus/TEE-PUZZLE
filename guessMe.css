@@ -307,7 +307,8 @@ hr {
 }
 
 .help:active, .shuffle:active, .check:active {
-    background: var(--color, rgb(250, 118, 138));
+    /* background: var(--color, rgb(250, 118, 138)); */
+    opacity: 0.7;
 }
 
 .true {
@@ -374,7 +375,11 @@ hr {
         width: 80%;
         height: auto;
         padding-bottom: 10px;
-    }
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+}
 
     .header {
         border-top-left-radius: 20px;
