@@ -1,12 +1,12 @@
-# GuessMe
+# CODER PUZZLE
 Word Game - try to guess the word from the given scrambled word. </br>
 
 <b>ABOUT GUEESSME</b></br>
-Guess me is a simple game where a scrambled word is given and a player is required to decipher the right word from the scrambled word.
+CODER PUZZLE is a simple game where a scrambled word is given and a player is required to decipher the right word from the scrambled word.
 The game is made up of 15 levels and each levels containers 10 words.
 There is a shuffle button as well as a help button to assist the player in figuring out what the right word should be.
 For every 10 right guesses, the player gets a free help and also advances to a new level.
-GUESSME was built using vanilla javascript, basic html and css and is responsive.
+CODER PUZZLE was built using vanilla javascript, basic html and css and is responsive.
 If you have a new feature you wish to implement, do not hesitate to make a PR!
 Enjoy!
 
@@ -20,4 +20,4 @@ If the player is unable to decipher the right word, there is a help button to he
 The space key helps to shuffle.
 The enter key can be used to check if input is valid.
 
-NARUDESIGNS 2020
+TEECODE design 2022

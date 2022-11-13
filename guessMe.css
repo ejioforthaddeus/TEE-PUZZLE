@@ -5,10 +5,12 @@
 
 :root {
     --color: rgb(250, 118, 138);
-}
+    --background:white;
 
-body {
-    background-color: white;
+}
+.all{
+    background-image: url(./images/boy_reading.svg);
+    background-repeat: no-repeat;
 }
 
 .restart {
@@ -35,7 +37,7 @@ body {
     font-size: 15px;
     text-align: center;
     line-height: 1.6;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: -20.84px 21.58px 30px 0px rgba(250, 8, 129, 0.61);
     display: none;
 }
 
@@ -51,7 +53,7 @@ body {
     font-family: Verdana, sans-serif;
     font-size: 13px;
     border: none;
-    background-color: var(--color, rgb(250, 118, 138));
+    background-color: rgb(3, 3, 124);
     cursor: pointer;
     outline: none;
     -webkit-tap-highlight-color: transparent;
@@ -116,7 +118,7 @@ hr {
 
 .play {
     padding: 10px 20px;
-    background-color: var(--color, rgb(250, 118, 138));
+    background-color:rgb(4, 4, 128);
     color: white;    
     border: none;
     border-radius: 6px;
@@ -130,6 +132,27 @@ hr {
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
+.btn{
+    background-color:rgb(4, 4, 128);
+    color: white;    
+    border: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none; 
+    margin-left: -80%;
+    margin-top: -25%;
+    padding: 5px 20px;
+    -webkit-tap-highlight-color: transparent;
+
+}
+@media (max-width:480px) {
+    .btn{margin-left:-50% ;}
+}
 
 .container {
     margin-top: -30px;
@@ -138,7 +161,7 @@ hr {
 }
 
 .header {
-    background-color: var(--color, rgb(250, 118, 138));
+    background-color: rgb(1, 71, 1);
     width: block;
     padding: 5px 10px;
     transition: ease 1s;
@@ -168,6 +191,7 @@ hr {
     cursor: pointer;
     outline: none;
     -webkit-tap-highlight-color: transparent;
+    box-shadow: 0.84px 6.58px 3px 0px rgba(14, 0, 6, 0.692);
 }
 
 .logo :nth-child(2){
@@ -200,7 +224,7 @@ hr {
 .gameInfo p {
     padding: 1.5px 7px;
     margin-right: 10px;
-    color: var(--color, rgb(250, 118, 138));
+    color:  rgb(1, 71, 1);
     background-color: rgb(255, 255, 255);
     text-align: center;
     width: auto;
@@ -260,7 +284,7 @@ hr {
 
 .gameWord_input .check{
     color: white;
-    background-color: var(--color, rgb(250, 118, 138));
+    background-color:  rgb(1, 71, 1);
     border: none;
     width: 130px;
     padding: 15px;
@@ -279,7 +303,7 @@ hr {
 }
 
 .buttons .shuffle {
-    background-color: var(--color, rgb(250, 118, 138));
+    background-color:  rgb(1, 71, 1);
     width: 50px;
     height: 50px;
     border: none;
@@ -292,7 +316,7 @@ hr {
 }
 
 .buttons .help {
-    background: var(--color, rgb(250, 118, 138));
+    background:  rgb(1, 71, 1);
     width: 50px;
     height: 50px;
     border: none;
@@ -388,6 +412,10 @@ hr {
 
     .gameWord_input .check{
         margin-bottom: 30px; 
+       
+    }
+    #input{
+        border: 2px dotted blue
     }
 
     .footer {
@@ -396,7 +424,12 @@ hr {
 
     #gameWord {
         padding: 50px 15px;
+        font-family: 'Courier New', Courier, monospace;
     }
+}
+.m{
+    font-size: 100%;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 @media only screen and (min-width: 900px){
@@ -409,4 +442,21 @@ hr {
     #gameWord {
         padding: 50px 15px;
     }
-}
+    #input{
+        border: 3px dotted blue
+    }}
+.theme-btn3 {
+    top: 9%;
+    right: 3%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--color-grey-4);
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease-in-out;
+  }
